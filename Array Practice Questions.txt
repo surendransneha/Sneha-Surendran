@@ -1,0 +1,450 @@
+
+1):    Find the minimum and maximum element in an array.
+
+Ans):  package Array;
+
+       public class MinMax {
+
+	public static void main(String[] args) {
+		
+		//Array Declaration and Assigning
+		
+        int a[]=new int [] {23,45,78,90,12,4};
+        int max=a[0] ;
+        int min=a[0] ;
+        System.out.println("The Array Elements are:");
+        
+        //Logic Apply
+        
+        for(int i=0;i<a.length;i++) {
+			System.out.print(a[i]+ "\t");
+        }
+        System.out.println("\n");
+ 
+        for (int i = 0; i < a.length; i++)
+        {
+            if (a[i] > max) {
+                max = a[i];
+            }
+ 
+            else if (a[i] < min) {
+                min = a[i];
+            }
+        }
+ 
+        //Output Printing
+        
+        System.out.println("The minimum array element is : " + min);
+        System.out.println("\n");
+        System.out.println("The maximum array element is : " + max);
+    }
+ 
+}
+
+--------------------------------------------------------------------------------------
+
+2):     Write a program to reverse the array.
+
+Ans):   package Array;
+
+        public class ReverseArray {
+	public static void main(String[] args) {
+		
+		//Array Declaration and Assigning
+		
+		String a[]= new String[]{"Apple","Orange","Grapes","Kiwi","Mango"};
+		
+		System.out.println("Orginal array is :");
+		
+		 //Logic Apply
+		
+		for(int i=0;i<a.length;i++) {
+			System.out.print(a[i]+ "\t");
+		}
+		
+		System.out.println("\n");
+		
+		 //Output Printing
+		
+		System.out.println("Reverse Array is :");
+		
+		for(int i=a.length-1;i>=0;i--) {
+			System.out.print(a[i]+ "\t");
+		}
+
+	}
+}
+
+--------------------------------------------------------------------------------------
+3):     Write a program to sort the given array.
+Ans):   package Array;
+
+        public class SortingAscending {
+	public static void main(String[] args) {
+		
+		//Array Declaration and Assigning
+		
+		int  arr[] = new int [] {5, 6, 8, 3, 1, 9, 7};     
+		int temp = 0;
+		
+		System.out.println("Elements of original array: ");    
+		
+		//Logic Apply
+		
+		for (int i = 0; i < arr.length; i++) {
+			System.out.print(arr[i] + "\t");  
+		}
+		
+		for (int i = 0; i < arr.length; i++) {
+		   for (int j = i+1; j < arr.length; j++) {
+			   
+			 //Compare and swap
+			   
+			   if(arr[i] > arr[j]) {
+				   temp = arr[i];    
+					arr[i] = arr[j];    
+					arr[j] = temp;  
+			   }
+		   }
+		}
+		
+		System.out.println();  
+		
+		//Output Printing
+		
+		System.out.println("Elements of array sorted in ascending order: ");    
+		for (int i = 0; i < arr.length; i++) {
+			System.out.print(arr[i] + "\t ");  
+		}
+	}
+}
+
+--------------------------------------------------------------------------------------
+
+4):     Find the occurrence of an integer in the array.[5,8,5,7,4,5]
+Ans):   package Array;
+
+        class IntegerOccurence 
+        {
+	public static void main(String[] args) 
+	{
+		//Array Declaration and Assigning
+
+		int arr[] = new int[] {5,8,5,7,4,5};
+		int a[] = new int [arr.length];
+		int visited = -1;
+
+		 //Logic Apply
+
+		for(int i=0; i<arr.length; i++){
+			int count = 1;
+			for(int j=i+1; j< arr.length; j++){
+				if(arr[i] == arr[j]){
+					count++;
+
+					a[j] = visited;
+				}
+			}
+			if(a[i] !=visited)
+				a[i]=count;
+		}
+
+		//Output Printing
+
+		System.out.println(" ");
+		System.out.println("Element  Occurence");
+		System.out.println(" ");
+		for(int i=0; i< a.length; i++){
+			if(a[i] != visited)
+				System.out.println("  "+ arr[i] +  "       " +a[i]);
+		}
+
+	}
+}
+
+ --------------------------------------------------------------------------------------
+
+5).     Move all negative elements to one side of an array.[-1,6,8,7,-4,-3] [7,8,6,-4,-3,-1]
+Ans):   package Array;
+
+        class NegativeElements 
+        {
+	 static void seperateElements(int arr[],int n) 
+	{
+
+		 //Array Declaration and Assigning
+		
+		int temp[] =new int[n];
+		int j=0;
+         
+		 //Logic Apply
+
+		for (int i =0; i< n;i++)
+			if(arr[i] >=0)
+				temp[j++]= arr[i];
+
+			if(j==n || j==0)
+				return;
+			for(int i=0 ; i<n; i++)
+				if(arr[i]<0)
+					temp[j++]=arr[i];
+			
+			for(int i=0;i<n;i++)
+				arr[i] = temp[i];
+	}
+			
+     public static void main(String arg[])
+	{
+		int arr[]=new int []{-1,6,8,7,-4,-3};
+		int m=arr.length;
+
+        seperateElements(arr, m);
+				
+		for(int i=0; i< m;i++)
+
+		//Output Printing
+
+		System.out.print(arr[i] + " ");
+	}
+}
+
+--------------------------------------------------------------------------------------		  
+
+6).     Find duplicates in an array.
+Ans):   package Array;
+
+        public class DuplicateArray {
+
+	public static void main(String[] args) {
+		
+		//Array Declaration and Assigning
+		
+		int [] arr = new int [] {1, 2, 3, 4, 2, 7, 8, 8, 3};   
+		
+		System.out.println("The Array Elements are :");
+		for(int i = 0; i < arr.length; i++) {
+			System.out.print(arr[i] + "\t");  
+		}
+        
+		System.out.println(" ");
+		
+		//Logic Apply
+		
+        System.out.println("Duplicate elements in given array: ");  
+        
+        for(int i = 0; i < arr.length; i++) {  
+            for(int j = i + 1; j < arr.length; j++) {  
+                if(arr[i] == arr[j])  
+                	
+                	//Output Printing
+                	
+                    System.out.print(arr[j] + "\t");  
+            }  
+        }  
+     }
+}
+
+--------------------------------------------------------------------------------------
+
+7):     Find the factorial of a large number.
+Ans):   package Array;
+
+        public class FactorialOfLargest {
+
+	public static void main(String[] args) {
+		
+		//Array Declaration and Assigning
+		
+        int a[]=new int [] {7,2,3,8,9};
+        int max=0 ;
+        int min=0 ;
+        int fact=1;
+        System.out.println("The Array Elements are:");
+        
+        //Logic Apply
+        
+        for(int i=0;i<a.length;i++) {
+			System.out.print(a[i]+ "\t");
+        }
+        System.out.println("\n");
+ 
+        for (int i = 0; i < a.length; i++)
+        {
+            if (a[i] > max) {
+                max = a[i];
+            }
+ 
+            else if (a[i] < min) {
+                min = a[i];
+            }
+        }
+ 
+       //Finding Factorial
+        
+        System.out.println("The Largest array element is : " + max);
+        
+        int num=max;
+        for(int i=1;i<=num;i++) {
+        	fact=fact*i;
+        }
+        //Output Printing
+        
+        System.out.println("\n");
+        System.out.println("Factorial of Largest Element is : " + fact);
+
+    }
+}
+
+--------------------------------------------------------------------------------------
+
+8):     How to find common element in three sorted array.
+Ans):   package Array;
+
+        public class CommonElements {
+	public static void main(String[] args) {
+		
+		//Array Declaration and Assigning
+		
+		int arr1[] = new int []{1, 4, 25, 55, 78, 99};
+		int arr2[] =new int [] {2, 3, 4, 34, 55, 68, 75, 78, 100};
+		int arr3[] = new int []{4, 55, 62, 78, 88, 98};
+		
+		int i=0;
+		int j=0;
+		int k=0;
+		
+		//Logic Apply
+		
+		System.out.println("Array 1: ");
+		for(int x = 0; x < arr1.length; x++) {
+			System.out.print(arr1[x] + "\t ");
+		}
+		
+		System.out.println(" ");
+		System.out.println("Array 2: ");
+		for(int x = 0; x < arr2.length; x++) {
+			System.out.print(arr2[x] + "\t ");
+		}
+		
+		System.out.println(" ");
+		System.out.println("Array 3:");
+		for(int x = 0; x < arr3.length; x++) {
+			System.out.print(arr3[x] + " \t");
+		}
+		
+		//Output Printing
+		
+		System.out.println(" ");
+		System.out.println("The common elements in the 3 sorted arrays are: ");
+		
+		while (i < arr1.length && j < arr2.length && k < arr3.length) {
+			if (arr1[i] == arr2[j] && arr2[j] == arr3[k]) {
+				System.out.print(arr1[i] + " \t");
+			i++;
+			j++;
+			k++;
+		}
+		    else if (arr1[i] < arr2[j]) {
+			i++;
+		}
+		    else if (arr2[j] < arr3[k]) {
+		    	j++;
+		}
+		    else {
+		    	k++;
+		    	}
+		}
+	}
+}
+	
+--------------------------------------------------------------------------------------
+
+9):     How to rearrange array in alternate positive and negative number.
+Ans):   package Array;
+
+        class  Rearrangearray
+        {
+	public void rearrange(int [] arr) 
+	{
+		//Array Declaration and Assigning
+
+		int pivot =0;
+		int left =0;
+		int right = arr.length -1;
+        
+          //Logic Apply
+
+		while (right> left){
+			while(arr[left]<0 && left < right)
+				left++;
+			while(arr[right]>0 && left<right)
+				right--;
+			if(left<right){
+
+				int temp = arr[left];
+				arr[left] = arr[right];
+				arr[right]= temp;
+				left++;
+				right--;
+			}
+		}left =1;
+		int high=0;
+		while(arr[high]<0)
+			high++;
+		right=high;
+		while(arr[left] < 0 && right <arr.length){
+			int temp =arr[left];
+			arr[left]=arr[right];
+			arr[right]=temp;
+			left=left+2;
+			right++;
+		}
+		for(int i=0 ; i< arr.length; i++){
+			System.out.print(" "+ arr[i]);
+		}
+	}
+	public static void main(String[] args)throws java.lang.Exception{
+		int[] arr={1,2,3,-9,5,-7,4,5,-6,-2,-3,-7,5,-8};
+		Rearrangearray i= new Rearrangearray();
+		i.rearrange(arr);
+	}
+}
+
+--------------------------------------------------------------------------------------
+		
+10):    Write a program to find the sum and product of all elements of an array.
+Ans):   package Array;
+
+        public class SumProduct {
+
+	public static void main(String[] args) {
+		
+		//Array Declaration and Assigning
+		
+		int [] arr = new int [] {1, 2, 3, 4, 5};  
+        int sum = 0;  
+        int product =1;
+        
+      //Logic Apply
+        
+        System.out.println("The array elements are :");
+        
+        for (int i = 0; i < arr.length; i++) {  
+        	 System.out.print(arr[i] + "\t");
+        	 System.out.print(" ");
+        }
+        for (int i = 0; i < arr.length; i++) {  
+           sum = sum + arr[i];  
+           product =  product * arr[i];
+        } 
+        
+      //Output Printing
+		
+        System.out.println(" ");
+        System.out.println("Sum of all the elements of an array: " + sum);  
+        System.out.println(" ");
+        System.out.println("Product of all the elements of an array: " + product); 
+    }  
+}  
+--------------------------------------------------------------------------------------
+	
