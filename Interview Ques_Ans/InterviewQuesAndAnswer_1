@@ -1,1 +1,30 @@
 
+//Question: What is the exact output of this code?
+
+class A {
+
+} 
+public class B{
+  void m1(){
+     System.out.println("This is method of Class B");
+  }
+}
+public class C{
+   public static void main(String[] args){
+     B objB = new B();
+     System.out.print("This is Class C");
+     objB.m1();
+  }
+}
+
+
+Output :-
+A. This is method of Class B
+B. This is Class C.
+C. This is Class C, This is method of Class B.
+D. Compilation Error.
+
+Answer:Option D
+Explanation: Class B is public,should be declared in a file named B.java
+              Class C is public,should be declared in a file named C.java
+            
