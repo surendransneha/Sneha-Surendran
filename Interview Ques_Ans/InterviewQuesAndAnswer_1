@@ -25,6 +25,6 @@ C. This is Class C, This is method of Class B.
 D. Compilation Error.
 
 Answer:Option D
-Explanation: Class B is public,should be declared in a file named B.java
-              Class C is public,should be declared in a file named C.java
+Explanation: Class B is public,should be declared in a file named B.java  public class B{
+              Class C is public,should be declared in a file named C.java  public class C{
             
