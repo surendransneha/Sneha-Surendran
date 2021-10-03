@@ -17,7 +17,7 @@ public class C{
   }
 }
 
-
+/*
 Output :-
 A. This is method of Class B
 B. This is Class C.
@@ -27,4 +27,4 @@ D. Compilation Error.
 Answer:Option D
 Explanation: Class B is public,should be declared in a file named B.java  public class B{
               Class C is public,should be declared in a file named C.java  public class C{
-            
+            */
