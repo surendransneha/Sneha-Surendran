@@ -1,0 +1,28 @@
+//Question: Create a parent class as below
+
+
+class A {
+private int a = 0;
+}
+Which one is tightly encapsulated in the below options
+Output :-
+A. class B extends A {
+ int a = 0;
+}
+
+B. class C extends A {
+ private int a = 0;
+}
+
+C. class B extends A {
+ static int a = 0;
+}
+
+D. class C extends A {
+ final int a = 0;
+}
+
+Answer:B
+    class B extends A{
+    private int a=0;
+   }
