@@ -1,6 +1,6 @@
 // Question: What is the output of this code?
 
-class A {
+class GlobalClass {
   public static void main(String[] args) {
     System.out.print("This is Class A");
   }
