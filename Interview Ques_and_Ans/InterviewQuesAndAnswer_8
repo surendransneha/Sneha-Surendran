@@ -1,1 +1,29 @@
+//Question: How many Objects created in the below code?
 
+
+class X {
+X() {
+System.out.println(this.hashCode());
+}
+}
+class Y extends X {
+Y() {
+System.out.println(this.hashCode());
+}
+}
+public class TestClass {
+public static void main(String[] args) {
+Y y = new Y();
+System.out.println(y.hashCode());
+}
+}
+
+Output :-
+A. 3.
+B. 2.
+C. 1.
+D. None of the above
+
+Answer:Option D
+Explanation:class TextClass is public and should be declared in a file named TextClass.java
+                  
