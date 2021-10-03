@@ -1,0 +1,12 @@
+//Question: Can we create a user defined immutable class, pick the correct option?
+
+
+Output :-
+A. Make the class as final and
+B. Make the data members as private and final.
+C. Both A and B are Correct
+D. None of the above
+
+Answer:Option C
+Explanation:The class must be declared as final so that child classes can’t be created.
+            Data members in the class must be declared private so that direct access is not allowed.
