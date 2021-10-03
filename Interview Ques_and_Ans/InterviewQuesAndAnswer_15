@@ -1,0 +1,23 @@
+//Question: What is the output of the below code?
+
+
+public class TestString1 {
+public static void main(String[] args) {
+String str = "420";
+str += 42;
+System.out.print(str);
+}
+}
+
+
+Output :-
+A. 420
+B. 42042.
+C. Compilation fails
+D. An exception is thrown at runtime
+
+
+Answer:Option B
+Explanation:str is declared 420.
+            str += 42; (means str = str+42),so 420+42 (Concatination is done here)
+            So output is 42042
