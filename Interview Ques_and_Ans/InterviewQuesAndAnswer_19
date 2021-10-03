@@ -1,0 +1,21 @@
+//Question: Read the below code and pick correct option?
+
+class LoopTestDemo {
+  public static void main(String[] args) {
+   int x = 12;
+   while (x < 10) {
+   x--;
+ }
+  System.out.print(x);
+  }
+}
+
+
+Output :-
+A. 11
+B. 10
+C. 12
+D. 9
+
+Answer:Option C
+Explanation:x is declared 12 and it checks x<10 which is false ,so it exit the loop and print the value of x which is 12.
