@@ -1,0 +1,23 @@
+//Question: What definition exactly match for abstract class? 
+
+
+
+Output :-
+A. public abstract class A {
+public Bark speak();
+}
+
+B. public abstract class A {
+public Bark speak() {
+  }
+}
+
+C. public class A {
+public abstract Bark speak();
+}
+
+D. public class A abstract{
+public abstract Bark speak();
+}
+
+Answer:Option D
