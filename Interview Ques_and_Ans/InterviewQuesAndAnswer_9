@@ -1,4 +1,4 @@
-//Question: What is the correct output of the given code?
+// Question: What is the correct output of the given code?
 
 public class Test {
 public static double calculation(double a, double b) {
