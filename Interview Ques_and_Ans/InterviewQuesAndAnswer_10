@@ -1,0 +1,21 @@
+// Question: What is the correct answer of the below code?
+
+
+public class Test {
+  public static void main(String[] args) {
+   int j = 0;
+    if ((8 > 4) | (j++ == 7))
+    System.out.println("j = " + j);
+  }
+}
+
+
+Output :-
+A. 0
+B. 1
+C. 2
+D. ArithmeticException (Divided by zero)
+
+Answer: Option B
+Explanation:First value of j is declared as zero and then checks whether 8>4 or j++ == 7 .The second condition j++ == 7 is false and first condition is true(8>4).So it prints the value of j by incrementing
+            to position because +j.
