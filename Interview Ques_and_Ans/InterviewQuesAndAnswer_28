@@ -1,0 +1,26 @@
+// Question: Read the below code and pick correct option?
+
+package InterviewQandA;
+
+class TestDoubleDemo {
+	public static long round(double a) {
+		if (a != 0x1.fffffffffffffp-2) {
+			return (long)Math.floor(a + 0.5d);
+			} else {
+				return 0;
+				}
+		}
+	public static void main(String[] args) {
+		TestDoubleDemo t = new TestDoubleDemo();
+		t.round(2.5);
+		}
+	}
+  
+Output :-
+A. 3
+B. 0.
+C. -1.
+D. None of the above.
+
+Answer:Option D
+  
