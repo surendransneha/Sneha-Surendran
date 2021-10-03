@@ -1,0 +1,24 @@
+//Question: Read the below code and pick correct option?
+
+
+public class Test {
+  public void main(String[] args) { 
+    int x = 6;
+    Test test = new Test();
+    test.doSomething(x);
+    System.out.print(" main x = " + x);
+  }
+void doSomething(int x) {
+    System.out.print(" method x = " + x++);
+  }
+}
+
+
+Output :-
+A. An exception is thrown at runtime
+B. method x = 6, main x = 6
+C. method x = 6 main x = 7
+D. method x = 7 main x = 6
+
+Answer:Option A
+Explanation:Main method is not static in class Test , define the main method as :public static void main(String[] args)
