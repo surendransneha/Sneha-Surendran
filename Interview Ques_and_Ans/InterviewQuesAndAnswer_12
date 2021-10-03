@@ -1,0 +1,19 @@
+//Question: Find Out the correct output of the given code?
+
+public class MathTest {
+  public void main(String[] args) {
+    int x = 10 * 10 - 10;
+    System.out.println(++x);
+  }
+}
+
+
+Output :-
+A. 0
+B. 90
+C. 91
+D. Runtime Error
+
+Answer:Option D
+Explanation:Main method is not static in class MathTest,please define the main method as:
+  public static void main(String[] args)
