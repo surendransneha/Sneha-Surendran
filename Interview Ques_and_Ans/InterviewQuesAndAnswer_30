@@ -1,0 +1,17 @@
+//Question: Cyclic inheritance allowed in Java or Not?
+
+
+class A extends B {
+// some methods
+}
+class B extends A {
+// some methods
+}
+
+
+A. No, Not Allowed.
+B. Yes, Definitely Allowed. 
+C. With Some condition, Allowed
+D. None of the Above
+
+Answer:Option B Yes ,Definitely Allowed
