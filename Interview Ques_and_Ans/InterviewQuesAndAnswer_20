@@ -1,0 +1,21 @@
+//Question: Read the below code and pick correct option?
+
+class BitwiseTestDemo {
+   public static void main(String[] args) {
+     int x = 5;
+     int y = 7;
+     System.out.print(((y * 2) % x));
+     System.out.print(" " + (y % x));
+   }
+}
+
+
+Output :-
+A. 6, 8
+B. 7, 9
+C. 4, 6
+D. 4, 2
+
+Answer:Option D
+Explanation:i) ((y*2) % x) --- ((7*2) % 5) =4
+            ii) (y % x) -----(7 % 5) =2
